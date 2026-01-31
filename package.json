@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/array-base-scattered",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Scatter a list of provided values to specified indices in a new zero-filled \"generic\" array.",
   "license": "Apache-2.0",
   "author": {
