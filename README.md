@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import scattered from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-scattered@esm/index.mjs';
+import scattered from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-scattered@v0.1.0-esm/index.mjs';
 ```
 
 #### scattered( len, indices, values, mode )
@@ -99,7 +99,7 @@ var out = scattered( 4, [ 1, 3 ], [ 20 ], 'throw' );
 
 import filledBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled-by@esm/index.mjs';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
-import scattered from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-scattered@esm/index.mjs';
+import scattered from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-scattered@v0.1.0-esm/index.mjs';
 
 // Generate an array of random indices:
 var N = discreteUniform( 5, 15 );
