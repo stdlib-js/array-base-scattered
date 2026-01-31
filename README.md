@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import scattered from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-scattered@deno/mod.js';
+import scattered from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-scattered@v0.1.0-deno/mod.js';
 ```
 
 #### scattered( len, indices, values, mode )
@@ -94,7 +94,7 @@ var out = scattered( 4, [ 1, 3 ], [ 20 ], 'throw' );
 ```javascript
 import filledBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled-by@deno/mod.js';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import scattered from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-scattered@deno/mod.js';
+import scattered from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-scattered@v0.1.0-deno/mod.js';
 
 // Generate an array of random indices:
 var N = discreteUniform( 5, 15 );
