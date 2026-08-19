@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,25 +16,31 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var zeros = require( '@stdlib/array-base-zeros' );
-var put = require( '@stdlib/array-base-put' );
+import { Collection, AccessorArrayLike } from '@stdlib/types/array';
+import { Mode } from '@stdlib/types/ndarray';
 
+/**
+* Index array.
+*/
+type IndexArray = Collection<number> | AccessorArrayLike<number>;
 
-// MAIN //
+/**
+* Values array.
+*/
+type ValuesArray<T> = Collection<T> | AccessorArrayLike<T>;
 
 /**
 * Scatters a list of provided values to specified indices in a new zero-filled "generic" array.
 *
-* @param {NonNegativeInteger} len - output array length
-* @param {IntegerArray} indices - list of indices
-* @param {Collection} values - values to scatter
-* @param {string} mode - index mode
-* @throws {Error} third argument must be broadcast compatible with the second argument
-* @returns {Array} output array
+* @param len - output array length
+* @param indices - list of element indices
+* @param values - values to scatter
+* @param mode - index mode
+* @returns output array
 *
 * @example
 * var indices = [ 1, 2 ];
@@ -44,17 +50,12 @@ var put = require( '@stdlib/array-base-put' );
 * // returns [ 0, 20, 30, 0 ]
 *
 * @example
-* var indices = [ 1, 2 ];
-* var values = [ 30 ];
-*
-* var out = scattered( 4, indices, values, 'throw' );
+* var out = scattered( 4, [ 1, 2 ], [ 30 ], 'throw' );
 * // returns [ 0, 30, 30, 0 ]
 */
-function scattered( len, indices, values, mode ) {
-	return put( zeros( len ), indices, values, mode );
-}
+declare function scattered<T = unknown>( len: number, indices: IndexArray, values: ValuesArray<T>, mode: Mode ): Array<number | T>;
 
 
 // EXPORTS //
 
-module.exports = scattered;
+export = scattered;
